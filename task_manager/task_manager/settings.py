@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tm'
+    'tm',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -123,4 +124,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'/static'),
 ]
-LOGIN_REDIRECT_URL = 'admin'
+LOGIN_REDIRECT_URL = '/'
