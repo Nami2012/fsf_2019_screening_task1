@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import signup,home
+from django.contrib.auth import views as auth_views
+from .views import signup,home,profile
 app_name = 'tm'
 urlpatterns = [
 
-    path('signup', signup, name='signup'),
 
 
 ]

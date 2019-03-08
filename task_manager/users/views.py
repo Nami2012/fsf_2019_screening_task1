@@ -23,3 +23,6 @@ def home(request):
 @login_required
 def profile(request):
     return render(request,'users/authenticate/profile.html')
+
+def firstpage(request):
+    return render(request,"base.html")
