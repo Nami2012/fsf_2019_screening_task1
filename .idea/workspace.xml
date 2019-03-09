@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e90099e7-79ac-4303-ac71-aa483ae780e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_manager/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_manager/task_manager/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/task_manager/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_manager/task_manager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/task_manager/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_manager/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_manager/templates/users/authenticate/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/templates/users/authenticate/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_manager/templates/users/authenticate/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/templates/users/authenticate/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_manager/templates/users/authenticate/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/templates/users/authenticate/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_manager/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_manager/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/users/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="e90099e7-79ac-4303-ac71-aa483ae780e1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,96 +23,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task_manager/templates/users/authenticate/logout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task_manager/templates/users/authenticate/profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task_manager/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task_manager/templates/users/authenticate/signup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task_manager/task_manager/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#636#668#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task_manager/users/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-                <element signature="e#208#632#0" />
-                <element signature="e#740#796#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task_manager/users/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task_manager/tm/urls.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task_manager/templates/users/authenticate/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -187,39 +87,6 @@
               <item name="fsf_2019_screening_task1" type="462c0819:PsiDirectoryNode" />
               <item name="task_manager" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="fsf_2019_screening_task1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fsf_2019_screening_task1" type="462c0819:PsiDirectoryNode" />
-              <item name="task_manager" type="462c0819:PsiDirectoryNode" />
-              <item name="task_manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fsf_2019_screening_task1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fsf_2019_screening_task1" type="462c0819:PsiDirectoryNode" />
-              <item name="task_manager" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fsf_2019_screening_task1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fsf_2019_screening_task1" type="462c0819:PsiDirectoryNode" />
-              <item name="task_manager" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fsf_2019_screening_task1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fsf_2019_screening_task1" type="462c0819:PsiDirectoryNode" />
-              <item name="task_manager" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="authenticate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fsf_2019_screening_task1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fsf_2019_screening_task1" type="462c0819:PsiDirectoryNode" />
-              <item name="task_manager" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -269,11 +136,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31097000" />
+    <option name="totallyTimeSpent" value="31616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12214765" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
