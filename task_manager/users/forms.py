@@ -23,9 +23,9 @@ class ProfileUpdateForm(forms.ModelForm):
 
 class TaskCreationForm(forms.ModelForm):
     title = forms.CharField(max_length=140,required=True)
-    description = forms.TextField(blank=True, null=True)
-    priority = forms.IntegerField(default='0',max_value=10)
+    description = forms.CharField(widget=forms.Textarea,required=False)
+    priority = forms.IntegerField(max_value=10)
     assignee = forms.ModelChoiceField(queryset=User.objects.all())
     class Meta:
         model = Task
-        fields = ('title','descritpion','priority')
+        fields = ('title','description','priority','assignee')

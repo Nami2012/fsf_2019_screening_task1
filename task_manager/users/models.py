@@ -37,7 +37,7 @@ class Task(models.Model):
         related_name="todo_assigned_to",
         on_delete=models.CASCADE,
     )
-    statuses = (
+    STATUSES = (
         ('Planned ', 'Planned'),
         ('Inprogress', 'Inprogress'),
         ('Done', 'Done'),
