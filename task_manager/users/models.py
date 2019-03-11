@@ -44,7 +44,8 @@ class Task(models.Model):
 
     )
     status = models.CharField(max_length=2, null=True, choices=STATUSES, default='Planned')
-
+    def __init__(self):
+        self.status = 'Planned'
     # Has due date for an instance of this object passed?
     def overdue_status(self):
         "Returns whether the Tasks's due date has passed or not."
