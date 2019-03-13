@@ -19,6 +19,7 @@ from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
 from users import views as user_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -28,7 +29,10 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='users/authenticate/login.html'), name='login'),
     path('logout/', auth_views.LoginView.as_view(template_name='users/authenticate/logout.html'), name='logout'),
     path('home/', user_views.home, name='home'),
-    path('tasks/',user_views.task,name = 'task')
+    path('tasks/',user_views.TaskListView.as_view(),name = 'task'),
+    path('tasks/<int:pk>/', user_views.TaskDetailView.as_view(), name='task-detail'),
+    path('tasks/new/', user_views.TaskCreateView.as_view(), name='task-create'),
+
 ]
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

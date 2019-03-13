@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e90099e7-79ac-4303-ac71-aa483ae780e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/task_manager/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_manager/task_manager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/task_manager/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_manager/templates/users/authenticate/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/templates/users/authenticate/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_manager/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_manager/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_manager/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_manager/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task_manager/users/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+            <state relative-caret-position="153">
+              <caret line="45" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -42,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task_manager/users/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+            <state relative-caret-position="201">
+              <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -54,11 +52,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task_manager/templates/users/tasks.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task_manager/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="181">
+              <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+                <element signature="e#282#706#0" />
+                <element signature="e#814#1567#0" />
+                <element signature="e#1597#1631#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,11 +70,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task_manager/task_manager/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+            <state relative-caret-position="350">
+              <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
               <folding>
                 <element signature="e#636#668#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task_manager/templates/users/authenticate/signup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" selection-end-line="12" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -108,12 +121,15 @@
         <option value="$PROJECT_DIR$/task_manager/templates/base.html" />
         <option value="$PROJECT_DIR$/task_manager/templates/users/authenticate/signup.html" />
         <option value="$PROJECT_DIR$/task_manager/users/admin.py" />
-        <option value="$PROJECT_DIR$/task_manager/users/forms.py" />
         <option value="$PROJECT_DIR$/task_manager/users/models.py" />
         <option value="$PROJECT_DIR$/task_manager/templates/users/authenticate/profile.html" />
-        <option value="$PROJECT_DIR$/task_manager/task_manager/urls.py" />
-        <option value="$PROJECT_DIR$/task_manager/users/views.py" />
         <option value="$PROJECT_DIR$/task_manager/templates/users/tasks.html" />
+        <option value="$PROJECT_DIR$/task_manager/templates/users/Task_detail.html" />
+        <option value="$PROJECT_DIR$/task_manager/templates/users/task_detail.html" />
+        <option value="$PROJECT_DIR$/task_manager/task_manager/urls.py" />
+        <option value="$PROJECT_DIR$/task_manager/templates/users/task_form.html" />
+        <option value="$PROJECT_DIR$/task_manager/users/views.py" />
+        <option value="$PROJECT_DIR$/task_manager/users/forms.py" />
       </list>
     </option>
   </component>
@@ -159,14 +175,6 @@
               <item name="task_manager" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fsf_2019_screening_task1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fsf_2019_screening_task1" type="462c0819:PsiDirectoryNode" />
-              <item name="task_manager" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="authenticate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fsf_2019_screening_task1" type="b2602c69:ProjectViewProjectNode" />
@@ -230,17 +238,39 @@
       <workItem from="1552202465332" duration="559000" />
       <workItem from="1552210701236" duration="3294000" />
       <workItem from="1552249382588" duration="2111000" />
-      <workItem from="1552324336918" duration="7144000" />
+      <workItem from="1552324336918" duration="10831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44724000" />
+    <option name="totallyTimeSpent" value="48411000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="18" y="10" width="680" height="700" extended-state="1" />
-    <editor active="true" />
+    <frame x="18" y="10" width="680" height="700" extended-state="0" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31129032" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5016129" side_tool="true" weight="0.41725352" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3274648" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4983871" visible="true" weight="0.41725352" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32922536" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32985657" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32990867" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31129032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -253,33 +283,10 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5016129" side_tool="true" weight="0.41725352" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3274648" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.41725352" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4983871" visible="true" weight="0.41725352" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32922536" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32985657" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32990867" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22816166" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.42328042" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.329806" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -428,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task_manager/templates/users/authenticate/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task_manager/users/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -460,16 +460,6 @@
         <state relative-caret-position="-207" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task_manager/task_manager/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-          <folding>
-            <element signature="e#636#668#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task_manager/templates/users/authenticate/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -477,44 +467,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task_manager/users/views.py">
+    <entry file="file://$PROJECT_DIR$/task_manager/templates/users/tasks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+        <state>
+          <caret lean-forward="true" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_manager/task_manager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
-            <element signature="e#241#665#0" />
-            <element signature="e#689#729#0" />
-            <element signature="e#773#1526#0" />
-            <element signature="e#1556#1590#0" />
+            <element signature="e#636#668#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task_manager/users/forms.py">
+    <entry file="file://$PROJECT_DIR$/task_manager/templates/users/task_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        <state relative-caret-position="102">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_manager/templates/users/task_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_manager/templates/users/authenticate/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_manager/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#57#0" expanded="true" />
+            <element signature="e#282#706#0" />
+            <element signature="e#814#1567#0" />
+            <element signature="e#1597#1631#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task_manager/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+        <state relative-caret-position="153">
+          <caret line="45" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task_manager/templates/users/tasks.html">
+    <entry file="file://$PROJECT_DIR$/task_manager/users/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="201">
+          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

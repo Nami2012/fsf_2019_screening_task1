@@ -1,6 +1,11 @@
 from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView
+)
 from .forms import SignUpForm,UserUpdateForm,ProfileUpdateForm,TaskCreationForm
 from .models import Task
 def signup(request):
@@ -51,4 +56,22 @@ def task(request):
         'tasks':Task.objects.all()
     }
 
-    return render(request,'users/tasks.html',context)
+    #return render(request,'users/tasks.html',context)
+
+class TaskListView(ListView):
+    model = Task
+    template_name = 'users/tasks.html'
+    context_object_name = 'tasks'
+#    ordering = ['date_posted']
+
+
+class TaskDetailView(DetailView):
+    model = Task
+
+class TaskCreateView(CreateView):
+    model = Task
+    fields = ['title', 'description', 'priority', 'assignee','due_date','status']
+
+    def form_valid(self, form):
+        form.instance.creator = self.request.user
+        return super().form_valid(form)
