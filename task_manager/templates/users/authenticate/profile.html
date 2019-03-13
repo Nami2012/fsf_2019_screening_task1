@@ -15,9 +15,11 @@
 {% if user.is_authenticated %}
                                     <a href = "{% url 'profile'%}">profile</a>
                                     <a href = "{% url 'logout'%}">logout</a>
+                                    <a href = "{%url  'tasks' %}">Task</a>
                 {% else %}
 
                 <a href = "{% url 'login'%}">login</a>
                 <a href = "{% url 'signup'%}"> signup</a>
                 {% endif %}
+
 {% endblock content %}

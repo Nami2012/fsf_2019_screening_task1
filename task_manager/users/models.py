@@ -27,7 +27,7 @@ class Task(models.Model):
     created_date = models.DateField(default=timezone.now, blank=True, null=True)
     due_date = models.DateField(blank=True, null=True)
     priority = models.IntegerField(default='0')
-    created_by = models.ForeignKey(
+    creator = models.ForeignKey(
         User, related_name="todo_created_by", on_delete=models.CASCADE
     )
     assignee = models.ForeignKey(
@@ -43,9 +43,9 @@ class Task(models.Model):
         ('Done', 'Done'),
 
     )
-    status = models.CharField(max_length=2, null=True, choices=STATUSES, default='Planned')
-    def __init__(self):
-        self.status = 'Planned'
+    status = models.CharField(max_length=15,null=True, choices=STATUSES, default='Planned')
+    #def __init__(self):
+     #use   self.status = 'Planned'
     # Has due date for an instance of this object passed?
     def overdue_status(self):
         "Returns whether the Tasks's due date has passed or not."

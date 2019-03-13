@@ -27,7 +27,8 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
     path('login/', auth_views.LoginView.as_view(template_name='users/authenticate/login.html'), name='login'),
     path('logout/', auth_views.LoginView.as_view(template_name='users/authenticate/logout.html'), name='logout'),
-    path('home/', user_views.home, name='home')
+    path('home/', user_views.home, name='home'),
+    path('tasks/',user_views.task,name = 'task')
 ]
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

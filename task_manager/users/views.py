@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import SignUpForm,UserUpdateForm,ProfileUpdateForm
-
+from .forms import SignUpForm,UserUpdateForm,ProfileUpdateForm,TaskCreationForm
+from .models import Task
 def signup(request):
     if request.method == 'POST':
             form = SignUpForm(request.POST)
@@ -44,3 +44,11 @@ def profile(request):
 
 def firstpage(request):
     return render(request,"base.html")
+
+
+def task(request):
+    context = {
+        'tasks':Task.objects.all()
+    }
+
+    return render(request,'users/tasks.html',context)
