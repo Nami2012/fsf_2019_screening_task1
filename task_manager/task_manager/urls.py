@@ -32,6 +32,8 @@ urlpatterns = [
     path('tasks/',user_views.TaskListView.as_view(),name = 'task'),
     path('tasks/<int:pk>/', user_views.TaskDetailView.as_view(), name='task-detail'),
     path('tasks/new/', user_views.TaskCreateView.as_view(), name='task-create'),
+    path('tasks/<int:pk>/update', user_views.TaskUpdateView.as_view(), name='task-update'),
+    path('tasks/<int:pk>/delete', user_views.TaskDeleteView.as_view(), name='task-delete'),
 
 ]
 if settings.DEBUG:

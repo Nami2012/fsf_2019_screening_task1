@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image
 from django.utils import timezone
+from django.urls import reverse
 
 
 # Create your models here.
@@ -68,6 +69,7 @@ class Task(models.Model):
         if self.completed:
             self.completed_date = datetime.datetime.now()
         super(Task, self).save()
-
+    def get_absolute_url(self):
+        return reverse('task-detail',kwargs={'pk':self.pk})
     class Meta:
         ordering = ["priority"]
