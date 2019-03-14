@@ -62,7 +62,7 @@ def task(request):
 
     #return render(request,'users/tasks.html',context)
 
-class TaskListView(ListView):
+class TaskListView(LoginRequiredMixin,ListView):
     model = Task
     template_name = 'users/tasks.html'
     context_object_name = 'tasks'
@@ -72,13 +72,14 @@ class TaskListView(ListView):
 class TaskDetailView(DetailView):
     model = Task
 
-class TaskCreateView(LoginRequiredMixin,CreateView):
+class TaskCreateView(CreateView):
     model = Task
     fields = ['title', 'description', 'priority', 'assignee','due_date','status']
 
     def form_valid(self, form):
         form.instance.creator = self.request.user
         return super().form_valid(form)
+
 
 class TaskUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     model = Task
@@ -93,15 +94,15 @@ class TaskUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
             return True
         return False
 
-class TaskDeleteView(LoginRequiredMixin,DeleteView):
+class TaskDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
     model = Task
     fields = ['title', 'description', 'priority', 'assignee','due_date','status']
     success_url = '/tasks'
     def form_valid(self, form):
         form.instance.creator = self.request.user
         return super().form_valid(form)
-  #  def test_func(self):
-  #      task = self.get_object()
-   #     if self.request.user == task.creator:
-    #        return True
-       # return False
+    def test_func(self):
+        task = self.get_object()
+        if self.request.user == task.creator:
+           return True
+        return False
