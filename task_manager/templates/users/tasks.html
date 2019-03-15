@@ -8,7 +8,7 @@
             <p>{{task.title}}</p>
         {% endif %}
         <p>{{task.due_date|date:"F d, Y"}}</p>
-        <p>{{task.assignee}}</p>
+
         <a href =" {% url 'task-update' task.id %}">update</a>
         <a href =" {% url 'task-delete' task.id %}">delete</a>
         <a href =" {% url 'task-create'  %}">create</a>

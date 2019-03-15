@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tm',
     #'users',
     'users.apps.UsersConfig',
+    'GroupTasks'
+
 ]
 
 MIDDLEWARE = [

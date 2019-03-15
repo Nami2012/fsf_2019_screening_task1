@@ -74,7 +74,7 @@ class TaskDetailView(DetailView):
 
 class TaskCreateView(CreateView):
     model = Task
-    fields = ['title', 'description', 'priority', 'assignee','due_date','status']
+    fields = ['title', 'description', 'priority','due_date','status']
 
     def form_valid(self, form):
         form.instance.creator = self.request.user
@@ -83,7 +83,7 @@ class TaskCreateView(CreateView):
 
 class TaskUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     model = Task
-    fields = ['title', 'description', 'priority', 'assignee','due_date','status']
+    fields = ['title', 'description', 'priority','due_date','status']
 
     def form_valid(self, form):
         form.instance.creator = self.request.user
@@ -96,7 +96,7 @@ class TaskUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
 
 class TaskDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
     model = Task
-    fields = ['title', 'description', 'priority', 'assignee','due_date','status']
+    fields = ['title', 'description', 'priority','due_date','status']
     success_url = '/tasks'
     def form_valid(self, form):
         form.instance.creator = self.request.user
