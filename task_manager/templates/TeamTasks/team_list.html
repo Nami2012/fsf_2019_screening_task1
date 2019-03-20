@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+        <p>{{team_Name}}</p>
+        <p>{{team_Lead}}</p>
+        {% for m in Members %}
+        <p>{{m}}</p>
+        {% endfor%}
+
+
+
+<a href =" {% url 'task-create'  %}">create</a>
+<a href = "{% url 'logout'%}">logout</a>
+{% endblock content %}

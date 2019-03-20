@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import Profile,Task
+from .models import Profile,Task,Team
 
 class SignUpForm(UserCreationForm):
     first_name = forms.CharField(max_length= 30,required = False,help_text='Optional')
@@ -37,3 +37,13 @@ class TaskCreationForm(forms.ModelForm):
     class Meta:
         model = Task
         fields = ('title','description','priority','due_date','status')
+
+
+
+class TeamCreationForm(forms.ModelForm):
+    TeamName = forms.CharField(max_length=26,required=True)
+    TeamMember = forms.ModelChoiceField(queryset=User.objects.all())
+    class Meta:
+        model = Team
+        fields = ('TeamName','TeamMember')
+

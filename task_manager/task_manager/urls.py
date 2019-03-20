@@ -19,7 +19,7 @@ from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
 from users import views as user_views
-from GroupTasks import views as Group_tasks_views
+#from TeamTasks import views as Team_tasks_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,8 +35,8 @@ urlpatterns = [
     path('tasks/new/', user_views.TaskCreateView.as_view(), name='task-create'),
     path('tasks/<int:pk>/update', user_views.TaskUpdateView.as_view(), name='task-update'),
     path('tasks/<int:pk>/delete', user_views.TaskDeleteView.as_view(), name='task-delete'),
-    path('tasks/group/',Group_tasks_views.work,name = 'start')
-
+    path('team/create/',user_views.TeamCreateView.as_view(),name = 'new'),
+    path('team/list',user_views.TeamListView,name = 'team')
 ]
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

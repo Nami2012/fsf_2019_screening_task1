@@ -11,7 +11,7 @@ from django.views.generic import (
     DeleteView
 )
 from .forms import SignUpForm,UserUpdateForm,ProfileUpdateForm,TaskCreationForm
-from .models import Task
+from .models import Task,Team
 def signup(request):
     if request.method == 'POST':
             form = SignUpForm(request.POST)
@@ -106,3 +106,29 @@ class TaskDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
         if self.request.user == task.creator:
            return True
         return False
+
+#class TeamListView(ListView):
+ #   model = Team
+  #  template_name = 'TeamTasks/team_list.html'
+   # context_object_name = 'team'
+#    ordering = ['date_posted']
+
+def TeamListView(request):
+    team = Team.objects.get(id=1)
+    Members = team.MemberName.all()
+    context = {
+        'team_Name': team.TeamLead,
+        'team_Lead': team.TeamName,
+        'Members':Members
+
+    }
+    return render(request, "TeamTasks/team_list.html", context)
+
+
+class TeamCreateView(CreateView):
+    model = Team
+    fields = ['TeamName', 'MemberName']
+    template_name = 'TeamTasks/team_form.html'
+    def form_valid(self, form):
+        form.instance.TeamLead = self.request.user
+        return super().form_valid(form)

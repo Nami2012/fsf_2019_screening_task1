@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #'users',
     'users.apps.UsersConfig',
-    'GroupTasks'
+  #  'TeamTasks'
 
 ]
 

@@ -73,3 +73,16 @@ class Task(models.Model):
         return reverse('task-detail',kwargs={'pk':self.pk})
     class Meta:
         ordering = ["priority"]
+
+
+class Team(models.Model):
+    TeamLead = models.ForeignKey(
+        User, related_name="Teamleader", on_delete=models.CASCADE
+    )
+    TeamName = models.CharField(max_length=25,unique=True)
+    MemberName = models.ManyToManyField(User,blank = True)
+    def __str__(self):
+        return self.TeamName
+
+    def get_absolute_url(self):
+        return u'/team/list' 
