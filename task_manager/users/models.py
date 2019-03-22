@@ -85,4 +85,4 @@ class Team(models.Model):
         return self.TeamName
 
     def get_absolute_url(self):
-        return u'/team/list' 
+        return f"/team/{self.id}/list/"

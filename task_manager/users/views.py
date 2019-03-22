@@ -113,8 +113,8 @@ class TaskDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
    # context_object_name = 'team'
 #    ordering = ['date_posted']
 
-def TeamListView(request):
-    team = Team.objects.get(id=1)
+def TeamListView(request,pk):
+    team = Team.objects.get(pk=pk)
     Members = team.MemberName.all()
     context = {
         'team_Name': team.TeamLead,
@@ -132,3 +132,31 @@ class TeamCreateView(CreateView):
     def form_valid(self, form):
         form.instance.TeamLead = self.request.user
         return super().form_valid(form)
+
+class TeamUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
+    model = Team
+    fields = ['TeamName', 'MemberName']
+    template_name = 'TeamTasks/team_form.html'
+    def form_valid(self, form):
+        form.instance.TeamLead = self.request.user
+        return super().form_valid(form)
+    def test_func(self):
+        team = self.get_object()
+        if self.request.user == team.TeamLead:
+            return True
+        return False
+
+
+class TeamDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
+    model = Team
+    fields = ['TeamName', 'MemberName']
+    success_url = 'www.google.com'
+    template_name = 'TeamTasks/team_confirm_delete.html'
+    def form_valid(self, form):
+        form.instance.TeamLead = self.request.user
+        return super().form_valid(form)
+    def test_func(self):
+        Team = self.get_object()
+        if self.request.user == Team.TeamLead:
+           return True
+        return False
