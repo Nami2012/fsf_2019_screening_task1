@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+        <p>{{Team.TeamName}}</p>
+        <p>{{Team.TeamLead}}</p>
+
+        {% for m in Team.MemberName.all %}
+                {% if m != Team.TeamLead %}
+                <p>{{ m }} </p>
+                {% endif %}
+        {% endfor %}
+        <br>
+
+
+
+
+
+
+
+<a href = "{% url 'logout'%}">logout</a>
+{% endblock content %}

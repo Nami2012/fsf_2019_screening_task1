@@ -37,6 +37,7 @@ urlpatterns = [
     path('tasks/<int:pk>/delete', user_views.TaskDeleteView.as_view(), name='task-delete'),
     path('team/create/',user_views.TeamCreateView.as_view(),name = 'new'),
     path('team/list/',user_views.TeamListView,name = 'team'),
+    path('team/<int:pk>/details',user_views.TeamDetailView,name = 'team-details'),
     path('team/<int:pk>/update', user_views.TeamUpdateView.as_view(), name='team-update'),
     path('team/<int:pk>/delete', user_views.TeamDeleteView.as_view(), name='team-delete'),
     path('team/tasks/new/', user_views.TeamTaskCreateView.as_view(), name='task-create'),

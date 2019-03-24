@@ -11,7 +11,8 @@
                 {% endif %}
         {% endfor %}
         <br>
-        <a href =" {% url 'task-create'  %}">create</a>
+
+        <a href =" {% url 'team-details' t.id  %}">details</a>
         {% endfor %}
 
 

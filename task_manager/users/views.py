@@ -168,3 +168,14 @@ class TeamTaskCreateView(CreateView,):
     def form_valid(self, form):
         form.instance.creator = self.request.user
         return super().form_valid(form)
+
+def TeamDetailView(request,pk):
+    team = Team.objects.get(id=pk)
+
+    #Member = team[0].MemberName.all()
+    context = {
+        'Team':team,
+
+
+    }
+    return render(request, "TeamTasks/Team_detail.html", context)
