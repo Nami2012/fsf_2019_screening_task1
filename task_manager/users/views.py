@@ -161,13 +161,35 @@ class TeamDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
            return True
         return False
 
-class TeamTaskCreateView(CreateView,):
-    model = Task
-    fields = ['title', 'description', 'priority','assignee','due_date','status']
-    template_name = 'TeamTasks/team_task_form.html'
-    def form_valid(self, form):
-        form.instance.creator = self.request.user
-        return super().form_valid(form)
+
+#class TeamTaskCreateView(CreateView,pk):
+ #   model = Task
+  #  fields = ['title', 'description', 'priority','assignee','due_date','status']
+   # template_name = 'TeamTasks/team_task_form.html'
+    #def form_valid(self, form):
+     #  form.instance.creator = self.request.user
+      # assignee = T
+       #assignees = [(choice[0], choice[1]) for choice in STATUS_CHOICES if choice[0] == 8 or choice[0] == 20]
+       #self.fields['status'] = forms.ChoiceField(choices=limited_choices)])
+
+       #return super().form_valid(form)
+
+
+
+
+def TeamTaskCreateView(request,pk):
+    team = Team.objects.get(id=pk)
+    all_assignees = team.MemberName.all()
+    assignees= [assign for assignees in all_assignees]
+        form = forms.assignee(assignees)
+ #   if form.is_valid():
+  #      form.creator = request.user
+   #     form.save()
+    #    form = TaskCreationForm()
+    #context = {
+     #   'form': form
+    #}
+    #return render(request, "TeamTasks/team_form.html", context)
 
 def TeamDetailView(request,pk):
     team = Team.objects.get(id=pk)
