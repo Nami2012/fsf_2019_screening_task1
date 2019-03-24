@@ -1,15 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
+        {% for t in Team %}
+        <p>{{t.TeamName}}</p>
+        <p>{{t.TeamLead}}</p>
 
-        <p>{{team_Name}}</p>
-        <p>{{team_Lead}}</p>
-        {% for m in Members %}
-        <p>{{m}}</p>
-        {% endfor%}
+        {% for m in t.MemberName.all %}
+                {% if m != t.TeamLead %}
+                <p>{{ m }} </p>
+                {% endif %}
+        {% endfor %}
+        <br>
+        <a href =" {% url 'task-create'  %}">create</a>
+        {% endfor %}
 
 
 
-<a href =" {% url 'task-create'  %}">create</a>
+
 <a href = "{% url 'logout'%}">logout</a>
 {% endblock content %}

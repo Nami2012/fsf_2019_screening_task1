@@ -4,17 +4,17 @@
        {% if task.creator == user %}
         <p>{{task}}</p>
         <p>{{task.description}}</p>
-        {%if task.title == 'the first task'%}
-            <p>{{task.title}}</p>
-        {% endif %}
         <p>{{task.due_date|date:"F d, Y"}}</p>
 
         <a href =" {% url 'task-update' task.id %}">update</a>
         <a href =" {% url 'task-delete' task.id %}">delete</a>
         <a href =" {% url 'task-create'  %}">create</a>
+
         <p>{{task.creator}}</p>
     {% endif %}
 {% endfor %}
+ <a href = " {% url 'user-team' %}">User teams</a>
+<a href =" {% url 'new'  %}">Team create</a>
 <a href =" {% url 'task-create'  %}">create</a>
 <a href = "{% url 'logout'%}">logout</a>
 {% endblock content %}

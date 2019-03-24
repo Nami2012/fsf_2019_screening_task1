@@ -82,7 +82,7 @@ class Team(models.Model):
     TeamName = models.CharField(max_length=25,unique=True)
     MemberName = models.ManyToManyField(User,blank = True)
     def __str__(self):
-        return self.TeamName
+        return self.TeamLead
 
     def get_absolute_url(self):
         return f"/team/{self.id}/list/"
