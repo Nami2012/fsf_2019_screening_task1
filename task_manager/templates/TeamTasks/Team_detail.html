@@ -8,11 +8,10 @@
         {% for m in Team.MemberName.all %}
                 {% if m != Team.TeamLead %}
                 <p>{{ m }} </p>
-            {% endif %}
+                {% endif %}
         {% endfor %}
         <br>
 
-        <a href = "{% url 'team-task-create' Team.id %}">Team Task Create</a>
 
 
 

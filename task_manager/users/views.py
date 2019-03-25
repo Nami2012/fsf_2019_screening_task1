@@ -179,8 +179,8 @@ class TeamDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
 def TeamTaskCreateView(request,pk):
     form = TaskCreationForm(request.POST or None)
     team = Team.objects.get(id=pk)
-    assignees_list = team.MemberName.all()
-    form.fields['assignee'] = form.ChoiceField(choices=assignees_list)
+   # assignees_list = team.MemberName.all()
+    form.fields['assignee'].queryset = team.MemberName.all()
     if form.is_valid():
         form.instance.creator = request.user
         form.save()
@@ -188,8 +188,15 @@ def TeamTaskCreateView(request,pk):
     context = {
         'form': form
     }
-    return render(request, "TeamTasks/team_form.html", context)
+    return render(request, "TeamTasks/team_task_form.html", context)
 
+#class TeamTaskCreateView(CreateView):
+ #   model = Task
+  #  fields = ['title', 'description', 'priority','assignee','due_date','status']
+   # template_name = 'TeamTasks/team_task_form.html'
+    #def form_valid(self, form):
+     #   form.instance.creator = self.request.user
+      #  return super().form_valid(form)
 
 def TeamDetailView(request,pk):
     team = Team.objects.get(id=pk)
