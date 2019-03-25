@@ -27,7 +27,7 @@ class TaskCreationForm(forms.ModelForm):
     priority = forms.IntegerField(max_value=10)
     due_date = forms.DateField()
 
-    assignee = forms.ModelChoiceField(queryset=Team.objects.all())
+    assignee = forms.ChoiceField(choices=User.objects.all())
     STATUSES = (
         ('Planned ', 'Planned'),
         ('Inprogress', 'Inprogress'),
@@ -37,9 +37,19 @@ class TaskCreationForm(forms.ModelForm):
 
 
     status =forms.ChoiceField(choices=STATUSES)
+    #def get_my_choices():
+
+     #   return choices_list
+
+    #def __init__(self, *args, **kwargs):
+     #   super(TaskCreationForm, self).__init__(*args, **kwargs)
+      #  self.fields['assignee'] = forms.ChoiceField(
+       # choices=get_my_choices())
+
     class Meta:
         model = Task
         fields = ('title','description','assignee','priority','due_date','status')
+
 
 
 
