@@ -28,6 +28,7 @@ class Task(models.Model):
     created_date = models.DateField(default=timezone.now, blank=True, null=True)
     due_date = models.DateField(blank=True, null=True)
     priority = models.IntegerField(default='0')
+    TeamName = models.CharField(max_length=25,blank=True,null=True)
     creator = models.ForeignKey(
         User, related_name="todo_created_by", on_delete=models.CASCADE
     )
