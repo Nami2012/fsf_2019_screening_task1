@@ -5,6 +5,9 @@
         <p>{{Team.TeamName}}</p>
         <p>{{Team.TeamLead}}</p>
 
+        {% for task in tasks %}
+                <P>{{task.title}}
+                        {% endfor %}
         {% for m in Team.MemberName.all %}
                 {% if m != Team.TeamLead %}
                 <p>{{ m }} </p>

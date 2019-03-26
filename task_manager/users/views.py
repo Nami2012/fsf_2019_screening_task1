@@ -200,10 +200,12 @@ def TeamTaskCreateView(request,pk):
 
 def TeamDetailView(request,pk):
     team = Team.objects.get(id=pk)
+    teamTasks = Task.objects.filter(TeamName = team.TeamName)
 
     #Member = team[0].MemberName.all()
     context = {
         'Team':team,
+        'tasks':teamTasks,
 
 
     }
