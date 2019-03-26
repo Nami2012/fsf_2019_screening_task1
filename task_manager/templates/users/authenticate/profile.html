@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'loginbase.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
 
@@ -12,16 +12,14 @@
         <button type="submit">update</button>
 
     </form>
-{% if user.is_authenticated %}
-                                    <a href = "{% url 'profile'%}">profile</a>
-                                     <a href = "{% url 'team' %}">Teams</a>
+<!-- {% if user.is_authenticated %}
                                     <a href = "{% url 'team-delete' 3 %}">team-delete</a>
                                     <a href = "{% url 'logout'%}">logout</a>
-                                    <a href = "{%url  'task' %}">Task</a>
+
                 {% else %}
 
                 <a href = "{% url 'login'%}">login</a>
                 <a href = "{% url 'signup'%}"> signup</a>
-                {% endif %}
+                {% endif %} -->
 
 {% endblock content %}

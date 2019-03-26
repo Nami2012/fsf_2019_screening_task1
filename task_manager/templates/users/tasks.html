@@ -1,11 +1,12 @@
-{% extends "base.html" %}
+{% extends "loginbase.html" %}
 {% block content %}
+<!-- make each task in boxes -->
     {% for task in tasks %}
        {% if task.creator == user %}
-        <p>{{task}}</p>
-        <p>{{task.description}}</p>
-        <p>{{task.due_date|date:"F d, Y"}}</p>
-
+        <p>Task Tile = {{task}}</p>
+        <p>Task Description = {{task.description}}</p>
+        <p><b>Due Date </b>{{task.due_date|date:"F d, Y"}}</p>
+<!-- make these align to the left -->
         <a href =" {% url 'task-update' task.id %}">update</a>
         <a href =" {% url 'task-delete' task.id %}">delete</a>
         <a href =" {% url 'task-create'  %}">create</a>

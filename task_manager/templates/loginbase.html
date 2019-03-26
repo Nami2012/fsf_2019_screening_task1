@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -15,9 +14,11 @@
 <body>
 
     <div class="topnav">
-        <a class="active" href="{% url 'login'%}">Login</a>
-        <a href="{% url 'signup'%}">SignUp</a>
+        <a class="active" href="{% url 'logout'%}">Logout</a>
         <a href="#contact">Guide</a>
+         <a href="{%url  'profile' %}">Profile</a>
+        <a href = "{%url  'task' %}">Tasks</a>
+         <a href = "{% url 'team' %}">Teams</a>
         <div class="page-header">
             <a href="/">Task Manager</a>
         </div>
@@ -41,4 +42,3 @@
 
 </body>
 </html>
-
