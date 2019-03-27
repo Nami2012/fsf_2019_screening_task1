@@ -1,10 +1,16 @@
 {% extends 'loginbase.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-
+<div class="card">
+ <img src = "{{user.profile.image.url}}"width = "100%">
+  <div class="container">
     <h1>{{user.username}}</h1>
     <h2>{{user.email}}</h2>
-    <img src = "{{user.profile.image.url}}">
+  </div>
+</div>
+
+
+
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{u_form|crispy}}
