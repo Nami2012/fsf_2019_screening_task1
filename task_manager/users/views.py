@@ -51,8 +51,8 @@ def profile(request):
     }
     return render(request,'users/authenticate/profile.html',context)
 
-def firstpage(request):
-    return render(request,"base.html")
+def home(request):
+    return render(request,"home.html")
 
 
 def task(request):
