@@ -15,12 +15,15 @@
             <!--<a href="#" class="action-button shadow animate green"></a>
             <a href="#" class="action-button shadow animate yellow">You?</a>
         <a href =></a>
-        <a href =>delete</a>
-        <a href =" {% url 'task-create'  %}">create</a>-->
+        <a href =>delete</a>-->
+
 
 
     {% endif %}
 {% endfor %}
+<br>
+
+<a href =" {% url 'task-create'  %}" class="button">create</a>
 <a href =" {% url 'new'  %}">Team create</a>
 <a href =" {% url 'task-create'  %}">create</a>
 <a href = "{% url 'logout'%}">logout</a>

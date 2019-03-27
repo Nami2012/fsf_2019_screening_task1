@@ -7,14 +7,18 @@
 
         {% for task in tasks %}
                 <P>{{task.title}}
+                        <a href =" {% url 'task-detail' task.id  %}"class="button">Task Detail</a>
                         {% endfor %}
+
         {% for m in Team.MemberName.all %}
                 {% if m != Team.TeamLead %}
+
                 <p>{{ m }} </p>
                 {% endif %}
+
         {% endfor %}
         <br>
-
+      <a href =" {% url 'team-task-create' Team.id  %}"class="button">create Task</a>
 
 
 

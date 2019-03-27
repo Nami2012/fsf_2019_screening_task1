@@ -2,6 +2,8 @@
 {% block content %}
 
         {% for t in Team %}
+
+        <div class="card">
         <p>{{t.TeamName}}</p>
         <p>{{t.TeamLead}}</p>
 
@@ -12,7 +14,10 @@
         {% endfor %}
         <br>
 
-        <a href =" {% url 'team-details' t.id  %}">details</a>
+        <a href =" {% url 'team-details' t.id  %}"class="button">details</a>
+
+                   </div>
+
         {% endfor %}
 
 

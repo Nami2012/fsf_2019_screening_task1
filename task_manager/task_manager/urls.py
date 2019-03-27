@@ -40,7 +40,7 @@ urlpatterns = [
     path('team/<int:pk>/details',user_views.TeamDetailView,name = 'team-details'),
     path('team/<int:pk>/update', user_views.TeamUpdateView.as_view(), name='team-update'),
     path('team/<int:pk>/delete', user_views.TeamDeleteView.as_view(), name='team-delete'),
-    path('team/tasks/<int:pk>/new/', user_views.TeamTaskCreateView, name='task-create'),
+    path('team/tasks/<int:pk>/new/', user_views.TeamTaskCreateView, name='team-task-create'),
 ]
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
