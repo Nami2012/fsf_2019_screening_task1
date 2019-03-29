@@ -1,5 +1,8 @@
+.image{
+    background-image: url(../../media/profile_pics/homebackground.jpeg);
+}
 .topnav {
-  background-color: #333;
+   background-color: #333;
   overflow: hidden;
 }
 
