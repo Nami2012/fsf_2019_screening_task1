@@ -3,11 +3,14 @@
      <div class="card">
    <p>{{object}}</p>
     <p>{{object.description}}</p>
+         <p>{{object.comment}}</p>
     {%if object.title == 'the first task'%}
         <p>{{object.title}}</p>
+
     {% endif %}
     <p>{{object.due_date|date:"F d, Y"}}</p>
      </div>
+    <a href=" {% url 'task-update' task.id %}" class="button">update</a>
 
 
 {% endblock content %}

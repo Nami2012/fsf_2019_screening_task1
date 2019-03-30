@@ -83,7 +83,7 @@ class TaskCreateView(CreateView):
 
 class TaskUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     model = Task
-    fields = ['title', 'description', 'priority','due_date','status']
+    fields = ['status','comment']
 
     def form_valid(self, form):
         form.instance.creator = self.request.user
@@ -96,7 +96,7 @@ class TaskUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
 
 class TaskDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
     model = Task
-    fields = ['title', 'description', 'priority','due_date','status']
+    fields = ['title', 'description', 'priority','due_date','status','comment']
     success_url = '/tasks'
     def form_valid(self, form):
         form.instance.creator = self.request.user
@@ -176,6 +176,9 @@ class TeamDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
      #   'form': form
     #}
     #return render(request, "TeamTasks/team_form.html", context)
+
+
+
 def TeamTaskCreateView(request,pk):
     form = TaskCreationForm(request.POST or None)
     team = Team.objects.get(id=pk)
@@ -189,6 +192,9 @@ def TeamTaskCreateView(request,pk):
         'form': form
     }
     return render(request, "TeamTasks/team_task_form.html", context)
+
+
+
 
 #class TeamTaskCreateView(CreateView):
  #   model = Task

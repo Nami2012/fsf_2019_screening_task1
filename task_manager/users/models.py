@@ -32,6 +32,7 @@ class Task(models.Model):
     creator = models.ForeignKey(
         User, related_name="todo_created_by", on_delete=models.CASCADE
     )
+    comment = models.TextField(max_length=500,blank=True,null=True)
     assignee = models.ForeignKey(
         User,
         blank=True,
@@ -87,3 +88,6 @@ class Team(models.Model):
 
     def get_absolute_url(self):
         return f"/team/{self.id}/list/"
+
+
+

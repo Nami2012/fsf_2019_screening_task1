@@ -26,7 +26,7 @@ class TaskCreationForm(forms.ModelForm):
     description = forms.CharField(widget=forms.Textarea,required=False)
     priority = forms.IntegerField(max_value=10)
     due_date = forms.DateField()
-
+    comment = forms.Textarea()
     assignee = forms.ModelChoiceField(queryset=User.objects.all())
     #assignee = forms.ModelChoiceField(queryset=Team.objects.all())
     STATUSES = (
@@ -49,7 +49,7 @@ class TaskCreationForm(forms.ModelForm):
 
     class Meta:
         model = Task
-        fields = ('title','description','priority','assignee','due_date','status')
+        fields = ('title','description','priority','assignee','comment','due_date','status')
 
 
 
