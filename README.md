@@ -3,7 +3,6 @@ Task-Manager Django App
 Description:
 Django Web Application for managing Tasks and Team works.
 
-Globally hosted application:<link>
 Running the application locally:
 The required modules and plugins are specified in the 'requirements.txt' file.
 After installation move to the base directory and run the following commands,
@@ -13,7 +12,8 @@ After installation move to the base directory and run the following commands,
 
 Website Specifications:
 IDE used : Pycharm
-Browser Work : 
+Backend :Django
+frontend : HTML,CSS
 
 Features:
 Create Tasks
@@ -29,7 +29,7 @@ WireFrame and Steps:(How it Works)
 
 
 Database Structure:
-
+[<img src="https://drive.google.com/file/d/1vjLphtDpBge7JPnWkJlVLqlNqf6Qls2G/view?usp=sharing" align="left" width="100">](#)
 
 
 Functionalities:
