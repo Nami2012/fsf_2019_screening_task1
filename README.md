@@ -26,6 +26,7 @@ python manage.py runserver
 
 
 # WireFrame and Steps:(How it Works)
+![Sample View](SampleView.png)
 
 
 
