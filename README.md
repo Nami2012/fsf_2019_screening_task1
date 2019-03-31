@@ -25,7 +25,7 @@ python manage.py runserver
 - Assign tasks with due date to team members
 
 
-# WireFrame and Steps:(How it Works)
+# Sample View of the application
 ![Sample View](SampleView.png)
 
 
