@@ -1,21 +1,21 @@
 # fsf_2019_screening_task1
-Task-Manager Django App
-Description:
+# Task-Manager Django App
+# Description:
 Django Web Application for managing Tasks and Team works.
 
-Running the application locally:
+# Running the application locally:
 The required modules and plugins are specified in the 'requirements.txt' file.
 After installation move to the base directory and run the following commands,
-=> python manage.py makemigrations
-=> python manage.py migrate
-=> python manage.py runserver
+`python manage.py makemigrations`
+`python manage.py migrate`
+`python manage.py runserver`
 
-Website Specifications:
+# Website Specifications:
 IDE used : Pycharm
 Backend :Django
 frontend : HTML,CSS
 
-Features:
+# Features:
 Create Tasks
 comment on your tasks
 set priorities for your tasks
@@ -23,17 +23,17 @@ Create Team
 Assign tasks with due date to team members
 
 
-WireFrame and Steps:(How it Works)
+# WireFrame and Steps:(How it Works)
 
 
 
 
-Database Structure:
+# Database Structure:
 
 ![databasestructure](Database_Structure.png)
 
 
-Functionalities:
+# Functionalities:
 User:
 Create To-do lists
 update
@@ -52,7 +52,8 @@ comment on their own tasks and that of their team leads
 
 
 
-Project Creator:
+# Project Creator:
+
 <p align="center"> Made with ❤ by <a href="https://github.com/Nami2012">Namitha S</a></p>
 
 
