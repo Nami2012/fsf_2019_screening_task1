@@ -31,11 +31,13 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='users/authenticate/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/authenticate/logout.html'), name='logout'),
     path('home/', user_views.home, name='home'),
+
     path('tasks/',user_views.TaskListView.as_view(),name = 'task'),
     path('tasks/<int:pk>/', user_views.TaskDetailView.as_view(), name='task-detail'),
     path('tasks/new/', user_views.TaskCreateView.as_view(), name='task-create'),
     path('tasks/<int:pk>/update', user_views.TaskUpdateView.as_view(), name='task-update'),
     path('tasks/<int:pk>/delete', user_views.TaskDeleteView.as_view(), name='task-delete'),
+
     path('team/create/',user_views.TeamCreateView.as_view(),name = 'new'),
     path('team/list/',user_views.TeamListView,name = 'team'),
     path('team/<int:pk>/details',user_views.TeamDetailView,name = 'team-details'),

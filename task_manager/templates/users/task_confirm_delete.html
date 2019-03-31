@@ -6,8 +6,8 @@
       <h2>Are you sure you want to delete the post "{{object.title}}</h2>
     {% csrf_token %}
 
-    <button type="submit">Yes,Delete</button>
-      <a href ="{%url 'task-detail' object.id %}">Cancel</a>
+    <button type="submit" class = "button">Yes,Delete</button>
+      <a href ="{%url 'task-detail' object.id %}" class="button">Cancel</a>
   </form>
 
 

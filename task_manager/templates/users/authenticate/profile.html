@@ -2,24 +2,15 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="card">
- <img src = "{{user.profile.image.url}}"width = "100%">
+ <img src = "{{user.profile.image.url}}"width = "100%" >
   <div class="container">
-    <h1>{{user.username}}</h1>
-    <h2>{{user.email}}</h2>
+    <h1>Username : {{user.username}}</h1>
+    <h2>Email : {{user.email}}</h2>
   </div>
 </div>
-
+<br>
 
  <a class = "button" href = {% url 'profile-update' %}>Update</a>
 
-<!-- {% if user.is_authenticated %}
-                                    <a href = "{% url 'team-delete' 3 %}">team-delete</a>
-                                    <a href = "{% url 'logout'%}">logout</a>
-
-                {% else %}
-
-                <a href = "{% url 'login'%}">login</a>
-                <a href = "{% url 'signup'%}"> signup</a>
-                {% endif %} -->
 
 {% endblock content %}

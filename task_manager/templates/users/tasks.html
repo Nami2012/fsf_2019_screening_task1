@@ -3,19 +3,21 @@
 <!-- make each task in boxes -->
     {% for task in tasks %}
        {% if task.creator == user %}
+
         <div class="card">
-        <p>Task Tile = {{task}}</p>
-        <p>Task Description = {{task.description}}</p>
-        <p><b>Due Date </b>{{task.due_date|date:"F d, Y"}}</p>
+        <p>Task Tile : {{task}}</p>
+        <p>Task Description : {{task.description}}</p>
+        <p><b>Due Date :</b>{{task.due_date|date:"F d, Y"}}</p>
+             <p>status : {{task.status}}</p>
+            <div>
+                 <h3>comments</h3>
+                 <p> {{task.comment}}</p>
+                 <br>
+             </div>
         <a href=" {% url 'task-update' task.id %}" class="button">update</a>
         <a href=" {% url 'task-delete' task.id %}"class="button">delete</a>
         </div>
-<!-- make these align to the left -->
-
-            <!--<a href="#" class="action-button shadow animate green"></a>
-            <a href="#" class="action-button shadow animate yellow">You?</a>
-        <a href =></a>
-        <a href =>delete</a>-->
+            
 
 
 
@@ -24,7 +26,9 @@
 <br>
 
 <a href =" {% url 'task-create'  %}" class="button">create</a>
-<a href =" {% url 'new'  %}">Team create</a>
-<a href =" {% url 'task-create'  %}">create</a>
-<a href = "{% url 'logout'%}">logout</a>
+
+<a href =" {% url 'new'  %}" class ="button" >Team create</a>
+
+<a href = "{% url 'logout'%}"class ="button">logout</a>
+
 {% endblock content %}

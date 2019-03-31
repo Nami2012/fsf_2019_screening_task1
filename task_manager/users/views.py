@@ -84,7 +84,7 @@ class TaskCreateView(CreateView):
 class TaskUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     model = Task
     fields = ['status','comment']
-
+    template_name = 'users/task_update.html'
     def form_valid(self, form):
         form.instance.creator = self.request.user
         return super().form_valid(form)
@@ -151,7 +151,7 @@ class TeamUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
 class TeamDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
     model = Team
     fields = ['TeamName', 'MemberName']
-    success_url = 'www.google.com'
+    success_url = '../list/'
     template_name = 'TeamTasks/team_confirm_delete.html'
     def form_valid(self, form):
         form.instance.TeamLead = self.request.user

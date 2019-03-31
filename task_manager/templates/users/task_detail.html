@@ -1,16 +1,21 @@
 {% extends "loginbase.html" %}
 {% block content %}
-     <div class="card">
-   <p>{{object}}</p>
-    <p>{{object.description}}</p>
-         <p>{{object.comment}}</p>
-    {%if object.title == 'the first task'%}
-        <p>{{object.title}}</p>
 
-    {% endif %}
-    <p>{{object.due_date|date:"F d, Y"}}</p>
+  <div class="card">
+        <p>Task Tile : {{object}}</p>
+        <p>Task Description : {{object.description}}</p>
+        <p><b>Due Date :</b>{{object.due_date|date:"F d, Y"}}</p>
+             <p>status : {{object.status}}</p>
+            <div>
+                 <h3>comments</h3>
+                 <p> {{object.comment}}</p>
+                 <br>
+             </div>
+        <a href=" {% url 'task-update' object.id %}" class="button">update</a>
+        <a href=" {% url 'task-delete' object.id %}"class="button">delete</a>
+
      </div>
-    <a href=" {% url 'task-update' task.id %}" class="button">update</a>
+
 
 
 {% endblock content %}

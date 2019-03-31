@@ -2,14 +2,9 @@
 {% block content %}
 
 
-        <p>{{Team.TeamName}}</p>
-        <p>{{Team.TeamLead}}</p>
-
-        {% for task in tasks %}
-                <P>{{task.title}}
-                        <a href =" {% url 'task-detail' task.id  %}"class="button">Task Detail</a>
-                        {% endfor %}
-
+        <p>TeamName : {{Team.TeamName}}</p>
+        <p>TeamLead :{{Team.TeamLead}}</p>
+        <h3>Team Members:</h3>
         {% for m in Team.MemberName.all %}
                 {% if m != Team.TeamLead %}
 
@@ -17,13 +12,20 @@
                 {% endif %}
 
         {% endfor %}
+        <h3>Tasks</h3>
+        {% for task in tasks %}
+                <P>{{task.title}}
+                        <a href =" {% url 'task-detail' task.id  %}"class="button">Task Detail</a>
+                        {% endfor %}
+
+
         <br>
       <a href =" {% url 'team-task-create' Team.id  %}"class="button">create Task</a>
+        <a href =" {% url 'team-delete' Team.id  %}"class="button">Delete Team</a>
 
 
 
 
 
 
-<a href = "{% url 'logout'%}">logout</a>
 {% endblock content %}

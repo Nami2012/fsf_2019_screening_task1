@@ -3,11 +3,11 @@
   <h2>Create a team</h2>
   <form method="POST">
       <legend>Delete Team</legend>
-      <h2>Are you sure you want to delete the post "{{object.TeamName}}</h2>
+      <h2>Are you sure you want to delete the Team "{{object.TeamName}}</h2>
     {% csrf_token %}
 
-    <button type="submit">Yes,Delete</button>
-      <a href ="www.google.com">Cancel</a>
+    <button type="submit" class="button"style="background-color: Red">Yes,Delete</button>
+      <a href ={% url 'team'%} class = "button">Cancel</a>
   </form>
 
 

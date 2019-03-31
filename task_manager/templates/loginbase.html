@@ -11,13 +11,14 @@
      <link rel="stylesheet" href="{% static 'css/cards.css' %}">
     <link rel="stylesheet" href="{% static 'css/buttons.css' %}">
     <title>Manage your Tasks</title>
+
 </head>
 
 <body>
 
     <div class="topnav">
         <a class="active" href="{% url 'logout'%}">Logout</a>
-        <a href="#contact">Guide</a>
+
          <a href="{%url  'profile' %}">Profile</a>
         <a href = "{%url  'task' %}">Tasks</a>
          <a href = "{% url 'team' %}">Teams</a>

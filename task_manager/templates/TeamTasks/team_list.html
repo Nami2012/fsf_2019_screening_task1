@@ -1,29 +1,30 @@
 {% extends "loginbase.html" %}
 {% block content %}
-
+        <a href =" {% url 'new'  %}"class="button">Create new Team</a>
         {% for t in Team %}
 
         <div class="card">
-        <p>{{t.TeamName}}</p>
-        <p>{{t.TeamLead}}</p>
-
-        {% for m in t.MemberName.all %}
+                <p style="font-size: large;"><b>Team Name : {{t.TeamName}}</b></p>
+                <p><b> Team lead  : {{t.TeamLead}}</b></p>
+                <h4>Team Members:</h4>
+        <ol>
+                {% for m in t.MemberName.all %}
                 {% if m != t.TeamLead %}
-                <p>{{ m }} </p>
+                <li style="font-size: medium">{{ m }} </li>
                 {% endif %}
-        {% endfor %}
+                {% endfor %}
         <br>
-
+        </ol>
         <a href =" {% url 'team-details' t.id  %}"class="button">details</a>
 
                    </div>
 
         {% endfor %}
-
-        <a href =" {% url 'new'  %}"class="button">Create new Team</a>
-
+        <br>
 
 
 
-<a href = "{% url 'logout'%}">logout</a>
+
+
+
 {% endblock content %}
