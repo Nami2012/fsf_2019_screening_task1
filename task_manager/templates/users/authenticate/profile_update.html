@@ -1,0 +1,12 @@
+{% extends 'loginbase.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+ <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{u_form|crispy}}
+        {{p_form|crispy}}
+        <button type="submit">update</button>
+
+    </form>
+
+{% endblock content %}

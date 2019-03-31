@@ -19,7 +19,6 @@ def signup(request):
             if form.is_valid():
                 form.save()
                 username = form.cleaned_data.get('username')
-                messages.success(request,f'Your account has been created')
                 return redirect('login')
     else:
         form = SignUpForm()
@@ -30,7 +29,7 @@ def home(request):
     return HttpResponse('you are logged in')
 
 @login_required
-def profile(request):
+def profile_update(request):
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST,instance = request.user)
         p_form = ProfileUpdateForm(request.POST,
@@ -39,7 +38,6 @@ def profile(request):
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()
             p_form.save()
-            messages.success(request,f'Your account has been updated')
             return  redirect('profile')
     else:
         u_form = UserUpdateForm(instance=request.user)
@@ -49,7 +47,9 @@ def profile(request):
         'u_form': u_form,
         'p_form': p_form
     }
-    return render(request,'users/authenticate/profile.html',context)
+    return render(request,'users/authenticate/profile_update.html',context)
+def profile(request):
+    return render(request,"users/authenticate/profile.html")
 
 def home(request):
     return render(request,"home.html")
@@ -129,6 +129,7 @@ class TeamCreateView(CreateView):
     model = Team
     fields = ['TeamName', 'MemberName']
     template_name = 'TeamTasks/team_form.html'
+    success_url = '/team/list'
     def form_valid(self, form):
         form.instance.TeamLead = self.request.user
         return super().form_valid(form)
