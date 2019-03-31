@@ -1,7 +1,7 @@
 # fsf_2019_screening_task1
 Task-Manager Django App
 Description:
-
+Django Web Application for managing Tasks and Team works.
 
 Globally hosted application:<link>
 Running the application locally:
@@ -16,7 +16,11 @@ IDE used : Pycharm
 Browser Work : 
 
 Features:
-
+Create Tasks
+comment on your tasks
+set priorities for your tasks
+Create Team
+Assign tasks with due date to team members
 
 
 WireFrame and Steps:(How it Works)
@@ -29,14 +33,26 @@ Database Structure:
 
 
 Functionalities:
+User:
+Create To-do lists
+update
+delete
+Create Teams
+
+Team Lead:
+Add team Members
+Assign Tasks
+delete and update tasks
+
+Team Members:
+view tasks by them and their leads
+comment on their own tasks and that of their team leads
 
 
-
-
-Suggestions and Issues:
 
 
 Project Creator:
+<p align="center"> Made with ❤ by <a href="https://github.com/Nami2012">Namitha S</a></p>
 
 
 
