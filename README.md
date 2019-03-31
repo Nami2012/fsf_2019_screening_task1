@@ -29,7 +29,8 @@ WireFrame and Steps:(How it Works)
 
 
 Database Structure:
-[<img src="https://drive.google.com/file/d/1vjLphtDpBge7JPnWkJlVLqlNqf6Qls2G/view?usp=sharing" align="left" width="100">](#)
+
+![databasestructure](Database_Structure.png)
 
 
 Functionalities:
