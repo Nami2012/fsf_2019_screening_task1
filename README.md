@@ -6,21 +6,23 @@ Django Web Application for managing Tasks and Team works.
 # Running the application locally:
 The required modules and plugins are specified in the 'requirements.txt' file.
 After installation move to the base directory and run the following commands,
-`python manage.py makemigrations`
-`python manage.py migrate`
-`python manage.py runserver`
+```
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
 
+```
 # Website Specifications:
-IDE used : Pycharm
-Backend :Django
-frontend : HTML,CSS
+- Backend :Django
+- frontend : HTML,CSS
+- IDE used : PyCharm
 
 # Features:
-Create Tasks
-comment on your tasks
-set priorities for your tasks
-Create Team
-Assign tasks with due date to team members
+- Create Tasks
+- Comment on your tasks
+- Set priorities for your tasks
+- Create Team
+- Assign tasks with due date to team members
 
 
 # WireFrame and Steps:(How it Works)
@@ -34,20 +36,20 @@ Assign tasks with due date to team members
 
 
 # Functionalities:
-User:
-Create To-do lists
-update
-delete
-Create Teams
+- User:
+  - Create To-do lists
+  - update
+  - delete
+  - Create Teams
 
-Team Lead:
-Add team Members
-Assign Tasks
-delete and update tasks
+- Team Lead:
+  - Add team Members
+  - Assign Tasks
+  - delete and update tasks
 
-Team Members:
-view tasks by them and their leads
-comment on their own tasks and that of their team leads
+- Team Members:
+  - view tasks by them and their leads
+  - comment on their own tasks and that of their team leads
 
 
 
