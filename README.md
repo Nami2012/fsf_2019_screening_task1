@@ -55,10 +55,5 @@ python manage.py runserver
 
 
 
-# Project Creator:
-
-<p align="center"> Made with ❤ by <a href="https://github.com/Nami2012">Namitha S</a></p>
-
-
 
 
