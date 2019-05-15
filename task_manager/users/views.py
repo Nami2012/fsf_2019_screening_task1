@@ -107,11 +107,13 @@ class TaskDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
            return True
         return False
 
-#class TeamListView(ListView):
- #   model = Team
-  #  template_name = 'TeamTasks/team_list.html'
-   # context_object_name = 'team'
-#    ordering = ['date_posted']
+"""
+class TeamListView(ListView):
+     model = Team
+     template_name = 'TeamTasks/team_list.html'
+     context_object_name = 'team'
+     ordering = ['date_posted']
+     """
 
 def TeamListView(request):
     team = Team.objects.filter(TeamLead = request.user)
@@ -163,20 +165,21 @@ class TeamDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
         return False
 
 
-
-#def TeamTaskCreateView(request,pk):
- #  team = Team.objects.get(id=pk)
-  #  assignees_list = team.MemberName.all()
-   # assignees= [assign for assignees in assignees_list]
-    #    form = forms.ass(all_round_names)
- #   if form.is_valid():
-  #      form.creator = request.user
-   #     form.save()
-    #    form = TaskCreationForm()
-    #context = {
-     #   'form': form
-    #}
-    #return render(request, "TeamTasks/team_form.html", context)
+"""
+def TeamTaskCreateView(request,pk):
+    team = Team.objects.get(id=pk)
+    assignees_list = team.MemberName.all()
+    assignees= [assign for assignees in assignees_list]
+    form = forms.ass(all_round_names)
+    if form.is_valid():
+        form.creator = request.user
+        form.save()
+        form = TaskCreationForm()
+    context = {
+        'form': form
+    }
+    return render(request, "TeamTasks/team_form.html", context)
+    """
 
 
 
@@ -196,14 +199,15 @@ def TeamTaskCreateView(request,pk):
 
 
 
-
-#class TeamTaskCreateView(CreateView):
- #   model = Task
-  #  fields = ['title', 'description', 'priority','assignee','due_date','status']
-   # template_name = 'TeamTasks/team_task_form.html'
-    #def form_valid(self, form):
-     #   form.instance.creator = self.request.user
-      #  return super().form_valid(form)
+"""
+class TeamTaskCreateView(CreateView):
+   model = Task
+   fields = ['title', 'description', 'priority','assignee','due_date','status']
+   template_name = 'TeamTasks/team_task_form.html'
+   def form_valid(self, form):
+       form.instance.creator = self.request.user
+       return super().form_valid(form)
+"""
 
 def TeamDetailView(request,pk):
     team = Team.objects.get(id=pk)
