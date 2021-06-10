@@ -1,4 +1,4 @@
-Django==2.2.10
+Django==2.2.24
 Pillow==5.4.1
 pytz==2018.9
 virtualenv==16.4.1
